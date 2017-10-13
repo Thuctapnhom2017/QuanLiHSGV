@@ -208,3 +208,20 @@ D:\học tập\ki 6\CNPM_homework\demo_thuoc\demo_ttnhom_root - Copy\demo_ttnhom
 D:\nam 4\TT nhom\Github\QuanLiHSGV\ttnhom_git\demo_ttnhom\bin\Debug\demo_ttnhom.exe.config
 D:\nam 4\TT nhom\Github\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.exe
 D:\nam 4\TT nhom\Github\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.pdb
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\bin\Debug\demo_ttnhom.exe.config
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.exe
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.pdb
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.csprojResolveAssemblyReference.cache
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.GUI.frmGiaoVien.resources
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.GUI.frmHocSinh.resources
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.GUI.frmLogin.resources
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.GUI.frmLop.resources
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.frmMain.resources
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.GUI.frmMonHoc.resources
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.GUI.frmPCGD.resources
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.GUI.frmQLND.resources
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.GUI.frmThongTinNguoiDung.resources
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.GUI.frmTroGiup.resources
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.Properties.Resources.resources
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.csproj.GenerateResource.Cache
+E:\GitHub_project\New folder\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.exe.licenses
