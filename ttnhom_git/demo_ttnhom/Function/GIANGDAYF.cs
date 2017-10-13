@@ -10,7 +10,67 @@ namespace demo_ttnhom.Function
 {
     class GIANGDAYF
     {
-      
+        private MyDbContext context;
+
+        public GIANGDAYF()
+        {
+            context = new MyDbContext();
+        }
+        //trả về toàn bộ dữ liệu
+        public IQueryable<GIANGDAY> GIANGDAYs
+        {
+            get { return context.GIANGDAYs; }
+        }
+
+        //trả về 1 đối tượng sản phẩm
+
+        public GIANGDAY FindEntity(int ID)
+        {
+            GIANGDAY dbEntry = context.GIANGDAYs.Find(ID);
+            return dbEntry;
+
+        }
+        public GIANGDAY FindLop(int malop, int monhoc)
+        {
+            var dbEntry = context.GIANGDAYs.Where(x => x.malop == malop && x.monhoc == monhoc).FirstOrDefault();
+            if (dbEntry != null)
+                return (GIANGDAY)dbEntry;
+            return new GIANGDAY();
+
+        }
+
+        public bool Insert(GIANGDAY model)
+        {
+            GIANGDAY dbEntry = context.GIANGDAYs.Find(model.magd);
+            if (dbEntry != null) return false;
+            context.GIANGDAYs.Add(model);
+            context.SaveChanges();
+            return true;
+        }
+
+        public bool Update(GIANGDAY model)
+        {
+            GIANGDAY dbEntry = context.GIANGDAYs.Find(model.magd);
+            if (dbEntry == null) return false;
+            dbEntry.magv = model.magv;
+            dbEntry.magd = model.magd;
+            dbEntry.malop = model.malop;
+            dbEntry.monhoc = model.monhoc;
+            // context.Entry(dbEntry).State = System.Data.Entity.EntityState.Modified;
+
+            context.SaveChanges();
+            return true;
+        }
+
+        public bool Delete(GIANGDAY model)
+        {
+            GIANGDAY dbEntry = context.GIANGDAYs.Find(model.magd);
+            if (dbEntry == null) return false;
+            //context.Entry(model).State = System.Data.Entity.EntityState.Deleted;
+            context.GIANGDAYs.Remove(dbEntry);
+            context.SaveChanges();
+            return true;
+        }
        
     }
 }

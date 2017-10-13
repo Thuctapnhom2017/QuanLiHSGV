@@ -18,5 +18,23 @@ namespace demo_ttnhom.GUI
         {
             InitializeComponent();
         }
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            int result = new NGUOIDUNGF().Login(txtUserName.Text, txtPassword.Text);
+            if (result > -1)
+            {
+                MessageBox.Show("Done");
+                Constant.NGUOIDUNG_ = new NGUOIDUNGF().FindEntity(txtUserName.Text);
+                this.Hide();
+                frmMain frm = new frmMain();
+                frm.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
