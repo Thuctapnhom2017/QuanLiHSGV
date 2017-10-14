@@ -205,3 +205,6 @@ D:\học tập\ki 6\CNPM_homework\demo_thuoc\demo_ttnhom_root - Copy\demo_ttnhom
 D:\học tập\ki 6\CNPM_homework\demo_thuoc\demo_ttnhom_root - Copy\demo_ttnhom\obj\Debug\demo_ttnhom.csproj.GenerateResource.Cache
 D:\học tập\ki 6\CNPM_homework\demo_thuoc\demo_ttnhom_root - Copy\demo_ttnhom\obj\Debug\demo_ttnhom.exe.licenses
 D:\học tập\ki 6\CNPM_homework\demo_thuoc\demo_ttnhom_root - Copy\demo_ttnhom\obj\Debug\demo_ttnhom.GUI.frmTroGiup.resources
+D:\nam 4\TT nhom\Github\QuanLiHSGV\ttnhom_git\demo_ttnhom\bin\Debug\demo_ttnhom.exe.config
+D:\nam 4\TT nhom\Github\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.exe
+D:\nam 4\TT nhom\Github\QuanLiHSGV\ttnhom_git\demo_ttnhom\obj\Debug\demo_ttnhom.pdb
