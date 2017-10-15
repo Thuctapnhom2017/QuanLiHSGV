@@ -58,10 +58,11 @@ namespace demo_ttnhom.GUI
             txtChucVu.DataBindings.Add(new Binding("Text", GridGV.DataSource, "chucvu", true, DataSourceUpdateMode.Never));
             txtHSL.DataBindings.Add(new Binding("Text", GridGV.DataSource, "hesoluong", true, DataSourceUpdateMode.Never));
             txtGhiChu.DataBindings.Add(new Binding("Text", GridGV.DataSource, "ghichu", true, DataSourceUpdateMode.Never));
+
         }
         private void clear()
         {
-            txtGhiChu.Text = txtHoTen.Text = txtDiaChi.Text = txtDienThoai.Text = txtChucVu.Text = txtHSL.Text = txtGhiChu.Text =txtMaGV.Text= "";
+            txtGhiChu.Text = txtHoTen.Text = txtDiaChi.Text = txtDienThoai.Text = txtChucVu.Text = txtHSL.Text = txtGhiChu.Text = txtMaGV.Text = "";
         }
         private void ClearBinding()
         {
@@ -79,21 +80,6 @@ namespace demo_ttnhom.GUI
         {
             clear();
         }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult result = MessageBox.Show("Bạn có muốn xóa nhà cung cấp " + txtHoTen.Text + " không?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    var ans = new GIAOVIENF().Delete(new GIAOVIEN { magv = int.Parse(txtMaGV.Text) });
-                    Init_(); ClearBinding(); Bindingtxt();
-                }
-            }
-            catch { }
-        }
-
         private void btnLuu_Click(object sender, EventArgs e)
         {
             try
@@ -104,13 +90,16 @@ namespace demo_ttnhom.GUI
                     ngaysinh = Convert.ToDateTime(dateNS.Text),
                     diachi = txtDiaChi.Text,
                     sdt = txtDienThoai.Text,
-                    chucvu=txtChucVu.Text,
-                    hesoluong=Convert.ToDecimal(txtHSL.Text),
+                    chucvu = txtChucVu.Text,
+                    hesoluong = Convert.ToDecimal(txtHSL.Text),
                     ghichu = txtGhiChu.Text
+
                 };
+
                 int ID_ = -1;
                 if (txtMaGV.Text != "") ID_ = int.Parse(txtMaGV.Text.ToString());
                 model.magv = ID_;
+
                 if (txtMaGV.Text == "")
                 {
                     var result = new GIAOVIENF().Insert(model);
@@ -128,6 +117,23 @@ namespace demo_ttnhom.GUI
                 MessageBox.Show(exp.Message);
             }
         }
+
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn xóa nhà cung cấp " + txtHoTen.Text + " không?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    var ans = new GIAOVIENF().Delete(new GIAOVIEN { magv = int.Parse(txtMaGV.Text) });
+                    Init_(); ClearBinding(); Bindingtxt();
+                }
+            }
+            catch { }
+        }
+
+        
 
         private void btnThem_Click_1(object sender, EventArgs e)
         {
