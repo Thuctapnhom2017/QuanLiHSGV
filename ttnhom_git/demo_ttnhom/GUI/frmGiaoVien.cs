@@ -22,6 +22,7 @@ namespace demo_ttnhom.GUI
             Bindingtxt();
             PhanQuyen();
         }
+
         private void PhanQuyen()
         {
             if (Constant.NGUOIDUNG_ != null)
@@ -48,6 +49,7 @@ namespace demo_ttnhom.GUI
             source.DataSource = new GIAOVIENF().GIAOVIENs.ToList();
             GridGV.DataSource = source;
         }
+
         private void Bindingtxt()
         {
             txtMaGV.DataBindings.Add(new Binding("Text", GridGV.DataSource, "magv", true, DataSourceUpdateMode.Never));
@@ -60,10 +62,12 @@ namespace demo_ttnhom.GUI
             txtGhiChu.DataBindings.Add(new Binding("Text", GridGV.DataSource, "ghichu", true, DataSourceUpdateMode.Never));
 
         }
+
         private void clear()
         {
             txtGhiChu.Text = txtHoTen.Text = txtDiaChi.Text = txtDienThoai.Text = txtChucVu.Text = txtHSL.Text = txtGhiChu.Text = txtMaGV.Text = "";
         }
+
         private void ClearBinding()
         {
             txtMaGV.DataBindings.Clear();
@@ -80,6 +84,23 @@ namespace demo_ttnhom.GUI
         {
             clear();
         }
+       
+
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn xóa nhà cung cấp " + txtHoTen.Text + " không?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    var ans = new GIAOVIENF().Delete(new GIAOVIEN { magv = int.Parse(txtMaGV.Text) });
+                    Init_(); ClearBinding(); Bindingtxt();
+                }
+            }
+            catch { }
+        }
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
             try
@@ -117,23 +138,6 @@ namespace demo_ttnhom.GUI
                 MessageBox.Show(exp.Message);
             }
         }
-
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult result = MessageBox.Show("Bạn có muốn xóa nhà cung cấp " + txtHoTen.Text + " không?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    var ans = new GIAOVIENF().Delete(new GIAOVIEN { magv = int.Parse(txtMaGV.Text) });
-                    Init_(); ClearBinding(); Bindingtxt();
-                }
-            }
-            catch { }
-        }
-
-        
 
         private void btnThem_Click_1(object sender, EventArgs e)
         {
