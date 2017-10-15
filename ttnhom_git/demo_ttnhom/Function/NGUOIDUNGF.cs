@@ -46,8 +46,6 @@ namespace demo_ttnhom.Function
             dbEntry.UserName = model.UserName;
             dbEntry.PassWord = model.PassWord;
             dbEntry.Admin = model.Admin;
-            // context.Entry(dbEntry).State = System.Data.Entity.EntityState.Modified;
-
             context.SaveChanges();
             return true;
         }
@@ -56,7 +54,6 @@ namespace demo_ttnhom.Function
         {
             NGUOIDUNG dbEntry = context.NGUOIDUNGs.Find(model.UserName);
             if (dbEntry == null) return false;
-            //context.Entry(model).State = System.Data.Entity.EntityState.Deleted;
             context.NGUOIDUNGs.Remove(dbEntry);
             context.SaveChanges();
             return true;

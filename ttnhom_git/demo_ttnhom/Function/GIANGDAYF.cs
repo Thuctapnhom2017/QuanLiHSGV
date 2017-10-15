@@ -22,7 +22,7 @@ namespace demo_ttnhom.Function
             get { return context.GIANGDAYs; }
         }
 
-        //trả về 1 đối tượng sản phẩm
+        //trả về 1 đối tượng giảng dạy
 
         public GIANGDAY FindEntity(int ID)
         {
@@ -56,8 +56,6 @@ namespace demo_ttnhom.Function
             dbEntry.magd = model.magd;
             dbEntry.malop = model.malop;
             dbEntry.monhoc = model.monhoc;
-            // context.Entry(dbEntry).State = System.Data.Entity.EntityState.Modified;
-
             context.SaveChanges();
             return true;
         }
@@ -66,11 +64,10 @@ namespace demo_ttnhom.Function
         {
             GIANGDAY dbEntry = context.GIANGDAYs.Find(model.magd);
             if (dbEntry == null) return false;
-            //context.Entry(model).State = System.Data.Entity.EntityState.Deleted;
             context.GIANGDAYs.Remove(dbEntry);
             context.SaveChanges();
             return true;
         }
-       
+
     }
 }
