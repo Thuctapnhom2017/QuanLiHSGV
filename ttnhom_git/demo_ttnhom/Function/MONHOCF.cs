@@ -29,7 +29,7 @@ namespace demo_ttnhom.Function
             return dbEntry;
 
         }
-
+        //Thêm
         public bool Insert(MONHOC model)
         {
             MONHOC dbEntry = context.MONHOCs.Find(model.ID);
@@ -38,7 +38,7 @@ namespace demo_ttnhom.Function
             context.SaveChanges();
             return true;
         }
-
+        //Sửa
         public bool Update(MONHOC model)
         {
             MONHOC dbEntry = context.MONHOCs.Find(model.ID);
@@ -47,7 +47,7 @@ namespace demo_ttnhom.Function
             context.SaveChanges();
             return true;
         }
-
+        //Xóa
         public bool Delete(MONHOC model)
         {
             MONHOC dbEntry = context.MONHOCs.Find(model.ID);

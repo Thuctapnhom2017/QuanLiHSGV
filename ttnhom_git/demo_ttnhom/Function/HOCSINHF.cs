@@ -30,6 +30,8 @@ namespace demo_ttnhom.Function
 
         }
 
+        //Thêm
+
         public bool Insert(HOCSINH model)
         {
             HOCSINH dbEntry = context.HOCSINHs.Find(model.mahs);
@@ -38,6 +40,8 @@ namespace demo_ttnhom.Function
             context.SaveChanges();
             return true;
         }
+
+        //Cập nhật
 
         public bool Update(HOCSINH model)
         {
@@ -54,6 +58,7 @@ namespace demo_ttnhom.Function
             context.SaveChanges();
             return true;
         }
+        //Xóa
 
         public bool Delete(HOCSINH model)
         {
@@ -63,6 +68,7 @@ namespace demo_ttnhom.Function
             context.SaveChanges();
             return true;
         }
+        //Tìm kiếm
         public List<HOCSINH> Search(string key)
         {
             return new HOCSINHF().HOCSINHs.Where(x => x.mahs.ToString().Contains(key) || x.hoten.Contains(key) ||

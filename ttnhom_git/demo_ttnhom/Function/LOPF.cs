@@ -22,13 +22,15 @@ namespace demo_ttnhom.Function
         }
 
         //trả về 1 đối tượng sản phẩm
-
+        
         public LOP FindEntity(int ID)
         {
             LOP dbEntry = context.LOPs.Find(ID);
             return dbEntry;
 
         }
+
+        //Thêm
         public bool Insert(LOP model)
         {
             LOP dbEntry = context.LOPs.Find(model.malop);
@@ -37,7 +39,7 @@ namespace demo_ttnhom.Function
             context.SaveChanges();
             return true;
         }
-
+        //Sửa
         public bool Update(LOP model)
         {
             LOP dbEntry = context.LOPs.Find(model.malop);
@@ -51,7 +53,7 @@ namespace demo_ttnhom.Function
             context.SaveChanges();
             return true;
         }
-
+        //Xóa
         public bool Delete(LOP model)
         {
             LOP dbEntry = context.LOPs.Find(model.malop);
@@ -60,6 +62,8 @@ namespace demo_ttnhom.Function
             context.SaveChanges();
             return true;
         }
+
+        //Tìm kiếm
         public List<LOP> Search(string key)
         {
             return new LOPF().LOPs.Where(x => x.malop.ToString().Contains(key) || x.tenlop.Contains(key) ||  x.quanso.ToString().Contains(key) || x.namhoc.Contains(key)   ).ToList();

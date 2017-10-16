@@ -28,6 +28,7 @@ namespace demo_ttnhom.Function
             return dbEntry;
 
         }
+        //Thêm người dùng
 
         public bool Insert(NGUOIDUNG model)
         {
@@ -37,7 +38,7 @@ namespace demo_ttnhom.Function
             context.SaveChanges();
             return true;
         }
-
+        //Sửa người dùng
         public bool Update(NGUOIDUNG model)
         {
             NGUOIDUNG dbEntry = context.NGUOIDUNGs.Find(model.UserName);
@@ -48,7 +49,7 @@ namespace demo_ttnhom.Function
             context.SaveChanges();
             return true;
         }
-
+        //Xóa người dùng
         public bool Delete(NGUOIDUNG model)
         {
             NGUOIDUNG dbEntry = context.NGUOIDUNGs.Find(model.UserName);
