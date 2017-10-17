@@ -15,6 +15,7 @@ namespace demo_ttnhom
         public frmMain()
         {
             InitializeComponent();
+            PhanQuyen();
         }
 
         private void btnDangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -23,11 +24,31 @@ namespace demo_ttnhom
             frm.ShowDialog();
         }
 
-       
+        private void PhanQuyen()
+        {
+            if (Constant.NGUOIDUNG_ != null)
+            {
+                btnDangNhap.Enabled = false;
+                if (Constant.NGUOIDUNG_.Admin == true)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                btnDangNhap.Enabled = true;
+                btnDangXuat.Enabled = btnTTND.Enabled = btnHS.Enabled = btnGV.Enabled = btnMonHoc.Enabled = btnLop.Enabled = btnPCGD.Enabled = false;
+            }
+        }
 
         private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           
+            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất không?", "Đăng Xuất", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK) { Constant.NGUOIDUNG_ = null; PhanQuyen(); }
         }
 
         private void btnTTND_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -63,12 +84,6 @@ namespace demo_ttnhom
         private void btnPCGD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmPCGD frm = new frmPCGD();
-            frm.ShowDialog();
-        }
-
-        private void btnTroGiup_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            frmTroGiup frm = new frmTroGiup();
             frm.ShowDialog();
         }
     }
