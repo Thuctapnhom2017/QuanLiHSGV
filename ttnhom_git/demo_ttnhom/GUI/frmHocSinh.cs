@@ -38,7 +38,7 @@ namespace demo_ttnhom.GUI
             }
             else
             {
-                
+
             }
         }
         private void Init_()
@@ -103,12 +103,12 @@ namespace demo_ttnhom.GUI
                 HOCSINH model = new HOCSINH()
                 {
                     hoten = txtHoTen.Text,
-                    
+
                     ngaysinh = Convert.ToDateTime(dateNS.Text),
                     diachi = txtDiaChi.Text,
                     sdt = txtDienThoai.Text,
 
-                    
+
                 };
                 int ID_ = -1;
                 if (txtMaHS.Text != "") ID_ = int.Parse(txtMaHS.Text.ToString());

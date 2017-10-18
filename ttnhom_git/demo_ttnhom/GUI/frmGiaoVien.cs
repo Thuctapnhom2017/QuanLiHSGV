@@ -61,7 +61,7 @@ namespace demo_ttnhom.GUI
         }
         private void clear()
         {
-            txtGhiChu.Text = txtHoTen.Text = txtDiaChi.Text = txtDienThoai.Text = txtChucVu.Text = txtHSL.Text = txtGhiChu.Text =txtMaGV.Text= "";
+            txtGhiChu.Text = txtHoTen.Text = txtDiaChi.Text = txtDienThoai.Text = txtChucVu.Text = txtHSL.Text = txtGhiChu.Text = txtMaGV.Text = "";
         }
         private void ClearBinding()
         {
@@ -104,8 +104,8 @@ namespace demo_ttnhom.GUI
                     ngaysinh = Convert.ToDateTime(dateNS.Text),
                     diachi = txtDiaChi.Text,
                     sdt = txtDienThoai.Text,
-                    chucvu=txtChucVu.Text,
-                    hesoluong=Convert.ToDecimal(txtHSL.Text),
+                    chucvu = txtChucVu.Text,
+                    hesoluong = Convert.ToDecimal(txtHSL.Text),
                     ghichu = txtGhiChu.Text
                 };
                 int ID_ = -1;
