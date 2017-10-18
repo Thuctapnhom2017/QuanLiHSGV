@@ -22,7 +22,7 @@ namespace demo_ttnhom.Function
             get { return context.DIEMs; }
         }
 
-        //trả về 1 đối tượng sản phẩm
+        //trả về 1 đối tượng điểm
 
         public DIEM FindEntity(int ID)
         {
@@ -44,13 +44,12 @@ namespace demo_ttnhom.Function
         {
             DIEM dbEntry = context.DIEMs.Find(model.ID);
             if (dbEntry == null) return false;
-            dbEntry.mahs=model.mahs;
+            dbEntry.mahs = model.mahs;
             dbEntry.mamon = model.mamon;
             dbEntry.diemtb = model.diemtb;
             dbEntry.hanhkiem = model.hanhkiem;
             dbEntry.hocki = model.hocki;
             dbEntry.namhoc = model.namhoc;
-            // context.Entry(dbEntry).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
             return true;
         }
@@ -59,7 +58,6 @@ namespace demo_ttnhom.Function
         {
             DIEM dbEntry = context.DIEMs.Find(model.ID);
             if (dbEntry == null) return false;
-            //context.Entry(model).State = System.Data.Entity.EntityState.Deleted;
             context.DIEMs.Remove(dbEntry);
             context.SaveChanges();
             return true;
@@ -70,7 +68,7 @@ namespace demo_ttnhom.Function
                         where x.hocki == hocki && x.namhoc == namhoc && x.mahs == mahs && x.mamon == mamon
                         select x;
 
-            List<DIEM> ans=query.ToList();
+            List<DIEM> ans = query.ToList();
             return ans.FirstOrDefault();
         }
     }

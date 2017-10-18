@@ -56,7 +56,6 @@ namespace demo_ttnhom.Function
         {
             LOP dbEntry = context.LOPs.Find(model.malop);
             if (dbEntry == null) return false;
-            //context.Entry(model).State = System.Data.Entity.EntityState.Deleted;
             context.LOPs.Remove(dbEntry);
             context.SaveChanges();
             return true;

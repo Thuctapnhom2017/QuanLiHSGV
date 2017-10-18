@@ -51,8 +51,6 @@ namespace demo_ttnhom.Function
             dbEntry.hesoluong = model.hesoluong;
             dbEntry.ghichu = model.ghichu;
             dbEntry.sdt = model.sdt;
-            // context.Entry(dbEntry).State = System.Data.Entity.EntityState.Modified;
-
             context.SaveChanges();
             return true;
         }
@@ -61,7 +59,6 @@ namespace demo_ttnhom.Function
         {
             GIAOVIEN dbEntry = context.GIAOVIENs.Find(model.magv);
             if (dbEntry == null) return false;
-            //context.Entry(model).State = System.Data.Entity.EntityState.Deleted;
             context.GIAOVIENs.Remove(dbEntry);
             context.SaveChanges();
             return true;
@@ -69,7 +66,7 @@ namespace demo_ttnhom.Function
 
        public  List<GIAOVIEN> Search(string key)
         {
-            return new GIAOVIENF().GIAOVIENs.Where(x => x.magv.ToString().Contains(key) || x.hoten.Contains(key) ||// x.ngaysinh.GetValueOrDefault(DateTime.Now).ToString("dd/MM/yyyy").Contains(key) ||
+            return new GIAOVIENF().GIAOVIENs.Where(x => x.magv.ToString().Contains(key) || x.hoten.Contains(key) ||
                                                         x.diachi.Contains(key) 
                                                     || x.sdt.Contains(key) || x.chucvu.Contains(key) || x.hesoluong.ToString().Contains(key)).ToList();
         }

@@ -44,8 +44,6 @@ namespace demo_ttnhom.Function
             MONHOC dbEntry = context.MONHOCs.Find(model.ID);
             if (dbEntry == null) return false;
             dbEntry.tenmon = model.tenmon;
-            dbEntry.note = model.note;
-            // context.Entry(dbEntry).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
             return true;
         }
@@ -54,7 +52,6 @@ namespace demo_ttnhom.Function
         {
             MONHOC dbEntry = context.MONHOCs.Find(model.ID);
             if (dbEntry == null) return false;
-            //context.Entry(model).State = System.Data.Entity.EntityState.Deleted;
             context.MONHOCs.Remove(dbEntry);
             context.SaveChanges();
             return true;

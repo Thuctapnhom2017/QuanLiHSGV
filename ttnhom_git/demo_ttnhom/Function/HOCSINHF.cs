@@ -51,8 +51,6 @@ namespace demo_ttnhom.Function
             dbEntry.sdt = model.sdt;
             dbEntry.hotencha = model.hotencha;
             dbEntry.hotenme = model.hotenme;
-            // context.Entry(dbEntry).State = System.Data.Entity.EntityState.Modified;
-
             context.SaveChanges();
             return true;
         }
@@ -61,14 +59,13 @@ namespace demo_ttnhom.Function
         {
             HOCSINH dbEntry = context.HOCSINHs.Find(model.mahs);
             if (dbEntry == null) return false;
-            //context.Entry(model).State = System.Data.Entity.EntityState.Deleted;
             context.HOCSINHs.Remove(dbEntry);
             context.SaveChanges();
             return true;
         }
         public List<HOCSINH> Search(string key)
         {
-            return new HOCSINHF().HOCSINHs.Where(x => x.mahs.ToString().Contains(key) || x.hoten.Contains(key) ||// x.ngaysinh.GetValueOrDefault(DateTime.Now).ToString("dd/MM/yyyy").Contains(key) ||
+            return new HOCSINHF().HOCSINHs.Where(x => x.mahs.ToString().Contains(key) || x.hoten.Contains(key) ||
                                                         x.diachi.Contains(key)
                                                     || x.sdt.Contains(key) || x.malop.ToString().Contains(key)|| x.hotencha.Contains(key) || x.hotenme.Contains(key)).ToList();
         }
