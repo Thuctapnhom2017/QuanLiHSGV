@@ -159,6 +159,7 @@
             this.btnTroGiup.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnTroGiup.LargeGlyph")));
             this.btnTroGiup.Name = "btnTroGiup";
             this.btnTroGiup.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnTroGiup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTroGiup_ItemClick);
             // 
             // ribbonPage1
             // 

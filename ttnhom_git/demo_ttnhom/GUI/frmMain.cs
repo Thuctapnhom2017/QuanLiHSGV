@@ -86,5 +86,11 @@ namespace demo_ttnhom
             frmPCGD frm = new frmPCGD();
             frm.ShowDialog();
         }
+
+        private void btnTroGiup_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmTroGiup frm = new frmTroGiup();
+            frm.ShowDialog();
+        }
     }
 }
